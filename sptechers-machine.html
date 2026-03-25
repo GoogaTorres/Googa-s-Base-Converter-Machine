@@ -1,0 +1,129 @@
+<!-- Criado por Marise Miranda | 2017.1 -->
+<!-- Adaptado por Matheus Matos | 2025.1 -->
+<!-- Readaptado por Gustavo Torres | 2026.1 -->
+
+<!DOCTYPE html>
+<html lang="pt">
+<link rel="stylesheet" href="style.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anta&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+    <title>Googa's Machine</title>
+</head>
+
+<!-- <body bgcolor="#00ffff">
+    <center>
+        <h1>SPTecher's Machine</h1>
+
+        <h3>Digite um número decimal:</h3>S
+        
+        <br><br>
+
+        <button onclick="converter()">Converter</button>
+
+        <h3>Resultados:</h3>
+        <p>Octal:
+        <div id="demo2"></div>
+        </p>
+        <p>Hexadecimal:
+        <div id="demo3"></div>
+        </p>
+        <p>Binário:
+        <div id="demo4"></div>
+        </p>
+    </center> -->
+
+    <body>
+        <div class="cabecalho">
+            <h1>Googa's Machine</h1>
+        </div>
+            <div class="bodyGeral">
+                <div class="conteiner numeroDecimal">
+                        <br>Insira um número decimal:
+                        <input id="input_numeroDecimal" type="text" placeholder="Ex: 42">
+                        <br>
+                        <button onclick="converterDecimal()">Converter</button>
+                        <p>Decimal para binário:<br><div class="conversão" id=decToBin></div></p>
+                        <p>Decimal para octal:<br><div class="conversão" id=decToOct></div></p>
+                        <p>Decimal para hexadecimal<br><div class="conversão" id="decToHex"></div></p>
+                </div>
+                <div class="conteiner numeroBinario">
+                    <br>Insira um número binário:
+                    <input id="input_numeroBinario" type="text" placeholder="Ex: 1101">
+                    <br>
+                    <button onclick="converterBinario()">Converter</button>
+                    <p>Binário para decimal:<br><div class="conversão" id=binToDec></div></p>
+                    <p>Binário para octal:<br><div class="conversão" id=binToOct></div></p>
+                    <p>Binário para hexadecimal<br><div class="conversão" id="binToHex"></div></p>
+                </div>
+                <div class="conteiner numeroOctal">
+                    <br>Insira um número octal:
+                    <input id="input_numeroOctal" type="text" placeholder="Ex: 101">
+                    <br>
+                    <button onclick="converterOctal()">Converter</button>
+                    <p>Octal para decimal:<br><div class="conversão" id=octToDec></div></p>
+                    <p>Octal para binário:<br><div class="conversão" id=octToBin></div></p>
+                    <p>Octal para hexadecimal<br><div class="conversão" id="octToHex"></div></p>
+                </div>
+                <div class="conteiner numeroHexa">
+                    <br>Insira um número octal:
+                    <input id="input_numeroHexa" type="text" placeholder="Ex: FF">
+                    <br>
+                    <button onclick="converterHexa()">Converter</button>
+                    <p>Hexa para decimal:<br><div class="conversão" id=hexToDec></div></p>
+                    <p>Hexa para binário:<br><div class="conversão" id=hexToBin></div></p>
+                    <p>Hexa para octal<br><div class="conversão" id="hexToOct"></div></p>
+                </div>
+        </div>
+            <footer>
+                Criado por Marise Miranda | 2017.1<br>
+                Adaptado por Matheus Matos | 2025.1<br>
+                Readaptado por Gustavo Torres | 2026.1
+            </footer>
+    </body>
+
+    <script>
+        function converterDecimal() {
+            let numeroDecimal = Number(input_numeroDecimal.value);
+
+            decToBin.innerHTML = numeroDecimal.toString(2)
+            decToOct.innerHTML = numeroDecimal.toString(8)
+            decToHex.innerHTML = numeroDecimal.toString(16)
+        }
+
+        function converterBinario(){
+            let numeroBinario = parseInt(input_numeroBinario.value, 2);
+
+            binToDec.innerHTML = numeroBinario.toString(10);
+            binToOct.innerHTML = numeroBinario.toString(8);
+            binToHex.innerHTML = numeroBinario.toString(16);
+        }
+
+        function converterOctal(){
+            let numeroOctal = parseInt(input_numeroOctal.value, 8);
+
+            octToDec.innerHTML = numeroOctal.toString(10);
+            octToBin.innerHTML = numeroOctal.toString(2);
+            octToHex.innerHTML = numeroOctal.toString(16);
+        }
+
+        function converterHexa(){
+            let numeroHexa = parseInt(input_numeroHexa.value, 16);
+
+            hexToDec.innerHTML = numeroHexa.toString(10);
+            hexToBin.innerHTML = numeroHexa.toString(2);
+            hexToOct.innerHTML = numeroHexa.toString(8);
+        }
+    </script>
+
+
+
+</html>
