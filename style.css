@@ -18,9 +18,10 @@ h1{
     font-size: 50px;
     margin-left: 50px;
 }
+
 .conteiner{
     background-color: #33151296;
-    width: 300px;
+    width: 400px;
     height: auto;
     border-color: #f15142;
     border: solid 1px;
@@ -59,7 +60,6 @@ h1{
     color: #23f8fe;
 }
 
-
 .conversão{
     color: #23f8fe;
 }
@@ -75,6 +75,6 @@ footer{
     text-align: center;
     padding: 10px;
     position: fixed;
-    width: 100%;
+    width: 100%;            
     bottom: 0%;
 }
